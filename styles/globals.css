@@ -201,15 +201,15 @@ span.text-red {
 .products-heading {
   text-align: center;
   margin: 40px 0px;
-  color: #324d67;
+  color: #001812;
 }
 .products-heading h2 {
-  font-size: 40px;
+  font-size: 37px;
   font-weight: 800;
 }
 .products-heading p {
-  font-size: 16px;
-  font-weight: 200;
+  font-size: 18px;
+  font-weight: 400;
 }
 .footer-banner-container {
   padding: 70px 40px;
