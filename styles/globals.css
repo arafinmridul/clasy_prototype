@@ -576,7 +576,7 @@ span.text-red {
 .cancel {
   width: 1000px;
   margin: auto;
-  margin-top: 160px;
+  /* margin-top: 160px; */
   background-color: #dcdcdc;
   padding: 50px;
   border-radius: 15px;
@@ -587,7 +587,7 @@ span.text-red {
 }
 
 .success .icon {
-  color: green;
+  color: #324d67;
   font-size: 40px;
 }
 .success h2 {
