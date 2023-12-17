@@ -17,30 +17,31 @@ const ProductDetails = ({ product, products }) => {
 
   const handleBuyNow = () => {
     onAdd(product, qty);
+
     setShowCart(true);
   };
 
   return (
     <div>
       <div className="product-detail-container">
-        <div className="image-container-wrapper">
+        <div>
+          <div className="image-container">
+            <img
+              src={urlFor(image && image[index])}
+              className="product-detail-image"
+            />
+          </div>
           <div className="small-images-container">
             {image?.map((item, i) => (
               <img
                 key={i}
-                src={item ? urlFor(item).url() : ""}
+                src={urlFor(item)}
                 className={
                   i === index ? "small-image selected-image" : "small-image"
                 }
                 onMouseEnter={() => setIndex(i)}
               />
             ))}
-          </div>
-          <div className="image-container">
-            <img
-              src={image && image[index] ? urlFor(image[index]).url() : ""}
-              className="product-detail-image"
-            />
           </div>
         </div>
 
@@ -102,11 +103,11 @@ const ProductDetails = ({ product, products }) => {
 
 export const getStaticPaths = async () => {
   const query = `*[_type == "product"] {
-   slug {
-     current
-   }
- }
- `;
+    slug {
+      current
+    }
+  }
+  `;
 
   const products = await client.fetch(query);
 
